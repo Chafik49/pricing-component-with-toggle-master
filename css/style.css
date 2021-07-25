@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(240, 78%, 98%);
+}
+
+header {
+    width: 60%;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h2 {
+    color: hsl(232, 13%, 33%);
+    margin-bottom: 20px;
+}
+.choose {
+    display: flex;
+    width: 300px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.check {
+    position:absolute;
+    top: 0;
+    opacity: 0;
+}
+.check-zone  .label{
+    width: 60px;
+    height: 30px;
+    border-radius: 2rem;
+    background-color: hsl(234, 14%, 74%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    cursor: pointer;
+    
+}
+.label .ball {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: white;
+    right: 1px;
+    position: absolute;
+    transition: .3s;
+}
+
+.check:checked + .label .ball {
+    right: 30px;
+}
+
+.label.anually {
+    background-color: hsl(233, 13%, 49%);
+}
+
+.cards {
+    width: 100%;
+    height: fit-content;
+    
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: rgb(197, 196, 196);
+    padding: 30px 10px;
+    text-align: center;
+    width: 250px;
+    border-radius: 1rem;
+}
+
+.card > h3{
+    font-size: 20px;
+    color: hsl(232, 13%, 33%);
+    margin-bottom: 15px;
+}
+
+.card .price{
+    color: hsl(232, 13%, 33%);
+    font-weight: bold;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+}
+
+.price span:last-child {
+    font-size: 40px;
+}
+
+.card .features {
+    padding-top: 20px;
+}
+
+.card .features h3 {
+    font-size: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
+    color: hsl(232, 13%, 33%);
+}
+.card .features h3:not(:first-child){
+    padding-top: 15px;
+}
+
+.card .more {
+    padding-top: 20px;
+}
+
+.card .more a {
+    text-decoration: none;
+    background:linear-gradient(to right,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color:white;
+    padding: 7px 18px;
+    border-radius: 7px;
+    width: 250px;
+    letter-spacing: 1px;
+}
+/* Active card */
+.pro-card {
+    padding: 70px 10px;
+    text-align: center;
+    width: 250px;
+    border-radius: 1rem;
+    background-color: hsl(237, 63%, 64%);
+
+}
+
+.pro-card > h3{
+    font-size: 20px;
+    color: hsl(240, 9%, 96%);
+    margin-bottom: 15px;
+}
+
+.pro-card .price{
+    color: hsl(240, 8%, 95%);
+    font-weight: bold;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+}
+
+.price span:last-child {
+    font-size: 40px;
+}
+
+.pro-card .features {
+    padding-top: 20px;
+}
+
+.pro-card .features h3 {
+    font-size: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(214, 213, 213);
+    color: hsl(240, 18%, 97%);
+}
+.pro-card .features h3:not(:first-child){
+    padding-top: 15px;
+}
+
+.pro-card .more {
+    padding-top: 20px;
+}
+
+.pro-card .more a {
+    text-decoration: none;
+    background-color:white;
+    color:hsl(237, 63%, 64%);
+    padding: 7px 18px;
+    border-radius: 7px;
+    width: 250px;
+    letter-spacing: 1px;
+}
+
+
+.price span{
+    margin-right: 10px;
+}
+@media (max-width:767px) {
+    .container {
+        flex-direction: column;
+    }
+    .card,
+    .pro-card {
+        margin-bottom: 20px;
+    }
+    .pro-card {
+        padding: 30px 10px;
+    }
+}
